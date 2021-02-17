@@ -1,8 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { SiteRoutes } from './sitesroutesmap';
 
 function App() {
+  return (
+    <BrowserRouter>
+      <Route path={SiteRoutes.squadsPage.path} component={SiteRoutes.squadsPage.component} />
+    </BrowserRouter>
+  )
   return (
     <div className="App">
       <header className="App-header">
