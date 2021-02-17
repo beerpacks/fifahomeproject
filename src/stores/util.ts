@@ -1,0 +1,1 @@
+export const later = (delay: number, value?: any) => new Promise(resolve => setTimeout(resolve, delay, value));
