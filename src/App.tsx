@@ -1,13 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { SiteRoutes } from './sitesroutesmap';
 
 function App() {
   return (
     <BrowserRouter>
-      <Route path={SiteRoutes.squadsPage.path} component={SiteRoutes.squadsPage.component} />
+      <Route render={() => {
+        return <Switch>
+          <Route exact path={SiteRoutes.squadsPage.path} component={SiteRoutes.squadsPage.component} />
+          <Route exact path={SiteRoutes.editPlayerPage.path} component={SiteRoutes.editPlayerPage.component} />
+          <Route exact path={SiteRoutes.newPlayerPage.path} component={SiteRoutes.newPlayerPage.component} />
+        </Switch>
+      }} />
     </BrowserRouter>
   )
   return (
