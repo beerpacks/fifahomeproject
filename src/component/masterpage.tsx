@@ -1,8 +1,7 @@
 import { Node } from "typescript"
 
-export const MasterPage = ({ children }: { children: Node }) => {
+export const MasterPage = ({ children }: { children: React.ReactNode }) => {
     return (<div>
-        <div>MasterPage</div>
         {
             children
         }
